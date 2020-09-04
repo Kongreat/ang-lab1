@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>First lab</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="error"></div>
+            <div class="chat">
+                <ul class="list" type="none"></ul>
+            </div>
+            <!-- <form method="POST" class="form" action="/"> -->
+                <div class="frm">
+                    <label for="email">Email</label>
+                    <input name = "email" type="text" class="email">
+
+                    <div class="emailMessage">
+
+                    </div>
+                    
+                    <label for="comment">Comment</label>     
+                    <input name = "comment" type="text" class="textBox" > 
+                    <!-- required minlength="3" maxlength="100" -->
+
+                    <div class="commentMessage">
+
+                    </div>
+
+                    <input type="radio" name="rating" id="ratingChoice1" value="1" onclick="ratingFunct(this.value)" checked>
+                    <label for="ratingChoice1">undef</label>
+
+                    <input type="radio" name="rating" id="ratingChoice1" value="1" onclick="ratingFunct(this.value)">
+                    <label for="ratingChoice1">1</label>
+
+                    <input type="radio" name="rating" id="ratingChoice2" value="2" onclick="ratingFunct(this.value)">
+                    <label for="ratingChoice2">2</label>
+
+                    <input type="radio" name="rating" id="ratingChoice3" value="3" onclick="ratingFunct(this.value)">
+                    <label for="ratingChoice3">3</label>
+
+                    <input type="radio" name="rating" id="ratingChoice4" value="4" onclick="ratingFunct(this.value)">
+                    <label for="ratingChoice4">4</label>
+
+                    <input type="radio" name="rating" id="ratingChoice5" value="5" onclick="ratingFunct(this.value)">
+                    <label for="ratingChoice5">5</label>
+
+                    <div class="ratingMessage">
+
+                    </div>
+
+                    <button type="submit" class="send">Send</button>
+
+                </div>
+            <!-- </form>  -->
+        </div>
+        
+
+
+
+        <script src="script/script.js"></script>
+    </body>
+
+</html>
+
+
