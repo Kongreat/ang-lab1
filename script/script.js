@@ -3,7 +3,7 @@ let comment = document.querySelector(".textBox");
 let send = document.querySelector(".send");
 let emailMessage = document.querySelector(".emailMessage");
 let commentMessage = document.querySelector(".commentMessage");
-let ratingScore = document.querySelector(".rating");
+let ratingChoice = document.querySelectorAll('input[name="rating"');
 let ratingMessage = document.querySelector(".ratingMessage");
 
 let number = 0
@@ -14,27 +14,26 @@ function ratingFunct(rat){
     rating = rat;
 }
 
-// function validateRating(){
-//     var valid = false;
-//     var x = ratingScore;
 
-//     let y
+function validateRating(){
+    let valid;
+    var x = ratingChoice;
     
-//     for (var i = 0; i<x.length; i++){
-//         if(x[i].checked){
-//             valid = true;
-//             break;
-//         }
+    for (var i = 0; i<x.length; i++){
+        if(x[i].checked){
+            valid = true;
+            break;
+        }
+    }
 
-//         if(valid == (true)){
-//             return (true);
-//         }
+    if(valid == (true)){
+        return (true);
+    }
 
-//         else{
-//             return (false);
-//         }
-//     }
-// }
+    else{
+        return (false);
+    }
+}
 
 send.addEventListener("click", function(){
 
@@ -88,9 +87,9 @@ send.addEventListener("click", function(){
         commentMessage.textContent = "Check ur comment"
     }
 
-    // if(validateRating == (false)){
-    //     ratingMessage = "rating is required";
-    // }
+    if(validateRating() == (false)){
+        ratingMessage.textContent = "Rating is required"
+    }
 
     // при успешном заполнении всех полей
     else if(validateComment(commentValue) == (true) && validateEmail(emailValue) == (true)){
@@ -98,6 +97,7 @@ send.addEventListener("click", function(){
         commentMessage.textContent = " ";
         ratingMessage.textContent = " ";
         
+        validateRating();
         
         number+=1;
         let time = new Date();

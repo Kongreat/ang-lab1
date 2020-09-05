@@ -44,6 +44,7 @@ body{
 
 .ratingMessage{
     right: 400px;
+    color:red;
     /* border: solid 2px red; */
 }
 
@@ -60,6 +61,8 @@ body{
 li{
     border-bottom: white 2px dashed;
 }
+
+
 
 
 
