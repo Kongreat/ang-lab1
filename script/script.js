@@ -6,8 +6,10 @@ let commentMessage = document.querySelector(".commentMessage");
 let ratingChoice = document.querySelectorAll('input[name="rating"');
 let ratingMessage = document.querySelector(".ratingMessage");
 
-let number = 0
-let rating
+let number = 0 //нумерация списка 
+let rating //значение рейтинга 
+
+let x;
 
 
 function ratingFunct(rat){
@@ -17,7 +19,7 @@ function ratingFunct(rat){
 
 function validateRating(){
     let valid;
-    var x = ratingChoice;
+    x = ratingChoice;
     
     for (var i = 0; i<x.length; i++){
         if(x[i].checked){
@@ -124,6 +126,11 @@ send.addEventListener("click", function(){
         list.append(list_item); 
         email.value = ""
         comment.value = ""
+
+        //обнуление рейтинга
+        for (var i = 0; i<x.length; i++){
+            x[i].checked = false;
+        }
     }
 
 })
